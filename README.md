@@ -45,9 +45,12 @@ DATABASE
       - Creating Recipes
       - Account Login
       - Account Registration
+![HOMEPAGE](https://user-images.githubusercontent.com/47987721/176850693-5b6bc1aa-108b-446e-94be-be1e756dad03.png)
 
 **RECIPE PAGE**
   - This is page contains the details of a Recipe
     - Access to:
       - Editing Recipe
       - Deleting Recipe
+![RECIPE](https://user-images.githubusercontent.com/47987721/176850701-a1c79474-cd4e-445c-9505-f5c756484cff.png)
+
