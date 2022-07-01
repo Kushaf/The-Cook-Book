@@ -46,7 +46,7 @@ DATABASE
       - Account Login
       - Account Registration
 
-**RECIPE PAGE** (Accessed by inputing the domain address and a primary key EX:'127.0.0.1:8000/1/' )
+**RECIPE PAGE**
   - This is page contains the details of a Recipe
     - Access to:
       - Editing Recipe
