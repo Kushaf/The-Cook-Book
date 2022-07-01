@@ -1,0 +1,19 @@
+<!--- calls navigation bar template --->
+{% extends 'cookbook/base.html' %}
+
+<!--- Displays the list of recipes --->
+{% block body %}
+
+    <h1>Recipes</h1>
+
+        <!--- link to creating a new recipe --->
+    <a href = "{% url 'cookbook:recipe-add' %}">Add Recipe</a>
+
+        <!--- display of recipes--->
+    <ul>
+        {% for recipe in all_recipe %}
+            <li><a href="{% url 'cookbook:recipe' recipe.id %}">{{ recipe.recipe_title }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -1,0 +1,37 @@
+<!--- calls navigation bar template --->
+{% extends 'cookbook/base.html' %}
+
+<!--- changes the title to the current page --->
+{% block title %}Login{% endblock %}
+
+{% block body %}
+
+<div>
+    <!---
+        this pages handles logging in an existing user
+     --->
+
+    <h3>Login </h3>
+
+        <!--- if error occurred, displays error message --->
+    <p style="color: red; font-size:15px;">{{ message }}</p>
+
+        <!--- form submission for user authentication(login) --->
+    <form action = "" method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+            <!--- template for field inputs --->
+        {% include 'cookbook/form-template.html' %}
+        <div>
+            <div>
+                <button type = "submit">Login</button>
+            </div>
+            <div>
+                </br> <!--- link to creating a new account --->
+                <a href="{% url 'cookbook:register' %}">Register to a New Account</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+<!--- calls navigation bar template --->
+{% extends 'cookbook/base.html' %}
+
+<!--- changes the title to the current page --->
+{% block title %}Confirm Delete?s{% endblock %}
+
+{% block body %}
+
+    <!--- form submission for the deletion of a recipe --->
+<form method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <input type="submit" value="Confirm" />
+</form>
+
+{% endblock %}

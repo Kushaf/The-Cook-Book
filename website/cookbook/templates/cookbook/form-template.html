@@ -1,0 +1,19 @@
+<!---
+    This html is used as a template for the login and register field inputs
+--->
+
+{% for field in form %}
+    <div>
+        <div>
+            <span> <!--- displays if a required field is left blank --->
+                {{ field.errors }}
+            </span>
+        </div>
+        <label> <!--- input field name --->
+            {{ field.label_tag }}
+        </label>
+        <div> <!--- input field box --->
+            {{ field }}
+        </div>
+    </div>
+{% endfor %}

@@ -1,0 +1,54 @@
+.navhead{
+    font-size: 40px;
+    color: white;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.action{
+    font-size: 15px;
+    color: black;
+    border: 1;
+    background: white;
+    box-shadow: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.navtab{
+    background-color: brown;
+}
+
+.textTab{
+    font-size: 20px;
+    color:white;
+    margin-right: 10px;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.nav{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    background-color: black;
+}
+
+.text_30{
+    font-size: 30px;
+}
+
+.background_white{
+    background-color: white;
+}
+
+body{
+    background-color: #f7b354;
+}

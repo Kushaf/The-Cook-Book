@@ -1,0 +1,26 @@
+<!--- calls navigation bar template --->
+{% extends 'cookbook/base.html' %}
+
+<!--- changes the title to the current page --->
+{% block title %}Add Recipe{% endblock %}
+
+{% block body %}
+
+<div>
+    <h3>Add a New Recipe</h3>
+
+        <!--- form submission for the creation of a new recipe --->
+    <form action = "" method = "post" enctype="multipart/form-data">
+        {% csrf_token %}
+
+            <!--- template for field inputs --->
+        {% include 'cookbook/form-template.html' %}
+        <div>
+            <div>
+                <button type = "submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

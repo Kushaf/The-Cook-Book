@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--- This html file is set to load in every page to act as navigation bar --->
+<head>
+    <meta charset="UTF-8">
+    <!--- the code here for 'title' is used to dynamically change the page title for different pages --->
+    <title>{% block title %}Cook Book{% endblock %}</title>
+
+    <!--- loads the static files (for our CSS that is in the project 'website/static' folder) --->
+    {% load static %}
+    <link rel = stylesheet type = "text/css" href="{% static 'nav.css' %}">
+
+</head>
+<body>
+    <nav>
+        <ul class = "nav">
+            <li>
+                <center>
+                    <!--- loops to the homepage --->
+                    <a href = "{% url 'cookbook:index' %}">
+                        <button class = "navhead">
+                                THE COOK BOOK
+                        </button>
+                    </a>
+                </center>
+            </li>
+            <li class = "navtab">
+                <!---
+                    The code belows allow the webpage to display if a user is logged in or not
+
+                    Displays a short message in the navigation menus if the user is logged in
+
+                    If no user is logged in, the webapage will display the option to log in or register
+
+                 --->
+
+                    <!--- check is user is logged in --->
+                {% if request.user.is_authenticated %}
+                <p class = "textTab">
+                    Hi, {{ request.user.username }}!
+                </p>
+                    <!--- logs out user --->
+                <a href = "{% url 'cookbook:logout' %}">
+                    <button class = "textTab">
+                        Log out
+                    </button>
+                </a>
+                {% else %}
+                    <!--- logs in user --->
+                <a href = "{% url 'cookbook:login' %}">
+                    <button class = "textTab">
+                        Login
+                    </button>
+                </a>
+                    <!--- create new account --->
+                <a href = "{% url 'cookbook:register' %}">
+                    <button class = "textTab">
+                        Register
+                    </button>
+                </a>
+                {% endif %}
+            </li>
+        </ul>
+    </nav>
+
+    <!---
+        if another html files calls this template,
+        the code below allows the template to display the other html files
+     --->
+{% block body %}
+{% endblock %}
+
+</body>
+</html>
